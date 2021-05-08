@@ -1,7 +1,8 @@
+<p *ngFor='let title of productComponents'>{{title}}</p>
 <div class="cardgroup">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
-      <div class="col" *ngFor="let p of lst">
-        <app-product-component></app-product-component>
+      <div class="col" *ngFor="let prObj of products">
+        <app-product-component [productObj]=prObj (myEvent)='getFromChildToParent($event)'></app-product-component>
       </div>
     </div>
  </div>
