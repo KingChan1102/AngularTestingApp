@@ -1,8 +1,12 @@
-<p *ngFor='let title of productComponents'>{{title}}</p>
-<div class="cardgroup">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
-      <div class="col" *ngFor="let prObj of products">
-        <app-product-component [productObj]=prObj (myEvent)='getFromChildToParent($event)'></app-product-component>
-      </div>
+<!-- <div class="text-center">
+  <span class="text-center" style="color: rgb(197, 241, 197); font-size: larger;">Number of cards selected:</span>
+  <span class="text-center" style="color: rgb(197, 241, 197); font-size: larger;">{{getLength()}}</span>
+</div> -->
+<h1 class="display-1 text-warning text-center mt-1 mb-4">Republic of India</h1>
+<div class="card-group mt-3 mb-3">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 g-4">
+    <div class="col" *ngFor="let prObj of products">
+      <app-product-component [productObj]=prObj (myEvent)='getFromChildToParent($event)'></app-product-component>
     </div>
- </div>
+  </div>
+</div>

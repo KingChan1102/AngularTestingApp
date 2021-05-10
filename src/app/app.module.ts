@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { ProductComponentComponent } from './product-component/product-component.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponentComponent,
     ProductsComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
