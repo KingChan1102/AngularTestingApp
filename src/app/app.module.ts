@@ -11,6 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { PlacesComponent } from './places/places.component';
+import { FoodComponent } from './food/food.component';
+import { StrengthsComponent } from './strengths/strengths.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ContactusComponent } from './contactus/contactus.component';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    ContactusComponent
+    ContactusComponent,
+    PlacesComponent,
+    FoodComponent,
+    StrengthsComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

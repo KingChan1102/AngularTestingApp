@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-image:url("https://cdn.wallpapersafari.com/53/40/e7AvgS.jpg");
+    background:rgb(66, 66, 105);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 50rem;
 }
 .form-label{
     color: honeydew;
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
 }

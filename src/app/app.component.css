@@ -4,3 +4,6 @@
 .nav-link{
     color: orange !important;
 }
+.navbar-toggler:focus{
+    box-shadow: none;
+}

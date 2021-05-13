@@ -1,0 +1,10 @@
+.carousel-caption {
+    bottom: 0;
+    top: auto;
+    background-color: rgba(0, 0, 0, 0.479);
+    right: 0;
+    left: 0;
+}
+.carousel-caption-header,.carousel-caption-text{
+    opacity: 1;
+}

@@ -1,1 +1,23 @@
-<p>home works!</p>
+<h2 class="display-2 text-center text-warning">Republic Of India</h2>
+<div id="carouselExampleControls" class="carousel carousel-dark slide carousel-fade p-0" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div *ngFor="let c of carousels;let ind=index" class="carousel-item {{isActive(ind)}}" data-bs-interval="5000" data-bs-pause='hover'>
+      <img src="{{c.carouselImage}}" class="d-block w-100" alt="..." height="500rem">
+      <div class="carousel-caption d-none d-md-block pb-0">
+        <h5 class="carousel-caption-header dispaly-5 text-warning">{{c.carouselHeading}}</h5>
+        <p class="carousel-caption-text hidden-sm hidden-xs pb-0 text-white">{{c.carouselPara}}</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container">
+
+</div>
