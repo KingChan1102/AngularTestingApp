@@ -1,0 +1,23 @@
+<div class="table-responsive text-white">
+    <table class="table align-middle text-white">
+      <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Year</td>
+            <td>Color</td>
+            <td>Pantone-Value</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let fdobj of myUsers2.data'>
+            <td>{{fdobj.id}}</td>
+            <td>{{fdobj.name}}</td>
+            <td>{{fdobj.year}}</td>
+            <td>{{fdobj.color}}</td>
+            <td>{{fdobj.pantone_value}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>

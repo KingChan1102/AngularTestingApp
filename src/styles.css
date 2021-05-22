@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background:rgb(66, 66, 105);
+    background-color:rgb(35, 0, 54);
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     height: 50rem;

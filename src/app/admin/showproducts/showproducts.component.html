@@ -1,0 +1,18 @@
+<table class="table text-center text-white mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Place Name</th>
+        <th>Description</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let placeObj of places'>
+        <td>{{placeObj.id}}</td>
+        <td>{{placeObj.productTitle}}</td>
+        <td>{{placeObj.description}}</td>
+        <td><img src={{placeObj.productImage}} alt="" width="250vw"></td>
+      </tr>
+    </tbody>
+  </table>

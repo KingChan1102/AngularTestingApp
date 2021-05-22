@@ -1,9 +1,12 @@
-<div class="container">
-    <div class="card-group mt-3 mb-3">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 g-4">
-            <div class="col" *ngFor="let placeObj of places">
-                <app-product-component [productObj]=placeObj></app-product-component>
-            </div>
-        </div>
-    </div>
+<ul class="nav nav-tabs justify-content-evenly mt-3">
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="viewplaces" routerLinkActive='active'>View Places</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="addplaces" routerLinkActive='active'>Add Places</a>
+    </li>
+</ul>
+
+<div class="container-fluid">
+    <router-outlet></router-outlet>
 </div>
