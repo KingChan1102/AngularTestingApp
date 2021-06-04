@@ -1,0 +1,50 @@
+<h2 class="text-white text-center">{{date | date}}</h2>
+<form #ref='ngForm' (ngSubmit)='onSave(ref.value)'>
+    <table class="table text-center text-white mt-3">
+        <thead>
+            <tr>
+                <th>Place Name</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let placeObj of places; let ind=index'>
+                <td>
+                    <span *ngIf="!editStatus || ind !== editPlaceIndex">
+                        {{placeObj.productTitle | uppercase}}
+                    </span>
+                    <span *ngIf="editStatus && ind == editPlaceIndex">
+                        <textarea class="form-control" id="placeName" rows="3" name="productTitle" id="placeName"
+                            [(ngModel)]='editPlaceObj.productTitle'></textarea>
+
+                    </span>
+                </td>
+                <td>
+                    <span *ngIf="!editStatus || ind !== editPlaceIndex">
+                        {{placeObj.description}}
+                    </span>
+                    <span *ngIf="editStatus && ind == editPlaceIndex">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"
+                            id="placeName" [(ngModel)]='editPlaceObj.description'></textarea>
+
+                    </span>
+                </td>
+                <td><img src={{placeObj.productImage}} alt="" width="250rem"></td>
+                <td>
+                    <span *ngIf="!editStatus || ind !== editPlaceIndex">
+                        <button class="btn" type="button" (click)=editPlace(placeObj,ind)><i
+                                class="fas fa-edit fa-lg text-warning"></i></button>
+                        <button class="btn" type="button" (click)=deletePlace(placeObj)><i
+                                class="fas fa-trash-alt fa-lg text-danger mt-5"></i></button>
+                    </span>
+                    <span *ngIf="editStatus && ind == editPlaceIndex">
+                        <button class="btn btn-success" type="submit"><i
+                                class="far fa-save fa-lg text-white"></i></button>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

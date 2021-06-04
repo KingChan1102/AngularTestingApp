@@ -1,8 +1,39 @@
-<div id="body">
-  <div class="container">
-    <h1 class="display-1 text-center">Incredible India</h1>
-    <app-products></app-products>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fdcd3b;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="\assets\undraw_adventure_4hum.svg" alt="" width="85vw" height="50vh" class="ms-2"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive='active'>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register" routerLinkActive='active'>Register</a>
+        </li>
+        <li class="nav-item" *ngIf="!dsObj.userLoginStatus()">
+          <a class="nav-link" routerLink="login" routerLinkActive='active'>Login</a>
+        </li>
+        <li class="nav-item" *ngIf="dsObj.userLoginStatus()">
+          <a class="nav-link" routerLink="login" routerLinkActive='active' (click)="dsObj.userLogout()">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contactus" routerLinkActive='active'>Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="cards" routerLinkActive='active'>Cards</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="test" routerLinkActive='active'>test</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="test2" routerLinkActive='active'>test2</a>
+        </li>
+      </ul>
+    </div>
   </div>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
-

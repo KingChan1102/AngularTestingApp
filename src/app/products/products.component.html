@@ -1,8 +1,18 @@
-<p *ngFor='let title of productComponents'>{{title}}</p>
-<div class="cardgroup">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
-      <div class="col" *ngFor="let prObj of products">
-        <app-product-component [productObj]=prObj (myEvent)='getFromChildToParent($event)'></app-product-component>
-      </div>
-    </div>
- </div>
+<ul class="nav nav-pills justify-content-evenly mt-3">
+  <li class="nav-item">
+    <a class="nav-link border border-dark rounded-0" routerLink='places' routerLinkActive='active'>Places</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link border border-dark rounded-0" routerLink='food' routerLinkActive='active'>Cuisine</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link border border-dark rounded-0" routerLink="strengths" routerLinkActive='active'>Strengths</a>
+  </li>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+

@@ -1,0 +1,21 @@
+.form-control{
+    background: rgba(255, 255, 255, 0) !important;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-radius:0;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+.form-floating,.form-control{
+    color: blanchedalmond;
+}
+.btn:active,.btn:hover{
+    box-shadow: none;
+    background-color: black !important;
+    color: #ffc107 !important;
+}
+.btn:focus{
+    box-shadow: none !important;
+}

@@ -1,3 +1,9 @@
-#body{
-    background-color: rgb(212, 212, 212);
+.active{
+    font-weight: bold;
+}
+.nav-link{
+    color: black !important;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
 }
