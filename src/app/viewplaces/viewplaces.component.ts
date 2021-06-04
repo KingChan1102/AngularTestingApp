@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.model';
 import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -9,12 +10,15 @@ import { DataService } from '../data.service';
   styleUrls: ['./viewplaces.component.css']
 })
 export class ViewplacesComponent implements OnInit {
+
+  searchItem:string;
   places:Product[]=[];
   constructor(private dsObj:DataService){
 
   }
   ngOnInit(){
-    this.dsObj.getPlacesData().subscribe(
+    this.dsObj.getPlacesData()
+    .subscribe(
       data=>{
         this.places=data;
       },

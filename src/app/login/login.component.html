@@ -2,14 +2,17 @@
 
 <div class="row">
     <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
-        <form #ref="ngForm" (ngSubmit)="onLogin(ref)">
+        <form #ref="ngForm" (ngSubmit)="ref.form.valid&&onLogin(ref)">
             <div class="mb-3">
                 <label for="email" class="form-label">Email/Username</label>
-                <input type="email text" class="form-control" id="formGroupExampleInput" placeholder="username/email" name="email" ngModel>
+                <input type="email text" class="form-control" id="formGroupExampleInput" placeholder="username/email" name="email" autocomplete="off" ngModel required minlength="4" #refUsername="ngModel">
+                <p class="text-warning" style="font-size: small;" *ngIf="(ref.submitted||refUsername.touched)&&refUsername.errors?.required">* Username is required</p>
+                <p class="text-warning" style="font-size: small;" *ngIf="refUsername.errors?.minlength">*Minimum four characters are required</p>
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">Password</label>
-                <input type="password" class="form-control" id="formGroupExampleInput2" name="password" placeholder="password" ngModel>
+                <input type="password" class="form-control" id="formGroupExampleInput2" name="password" placeholder="password" autocomplete="off" required minlength="4" pattern="\d\d-\d" ngModel #refPassword="ngModel">
+                
             </div>
             <button class="btn btn-success d-block mx-auto shadow-none" type="submit">Login</button>
         </form>

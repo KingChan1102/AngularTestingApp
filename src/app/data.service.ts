@@ -16,4 +16,26 @@ export class DataService {
   createNewPlace(placeObj):Observable <any>{
     return this.hc.post('http://localhost:3000/places',placeObj);
   }
+
+  updatePlace(modifiedPlaceObj){
+    return this.hc.put('http://localhost:3000/places/'+modifiedPlaceObj.id,modifiedPlaceObj);
+  }
+  deletePlace(id){
+    return this.hc.delete('http://localhost:3000/places/'+id)
+  }
+  userLoginStatus():boolean{
+    if (localStorage.getItem("username")==null){
+
+      console.log(localStorage.getItem("username"));
+      return false;
+    }
+    else{
+      console.log(localStorage.getItem("username"));
+      console.log("in true");
+      return true;
+    }
+  }
+  userLogout(){
+    localStorage.clear();
+  }
 }

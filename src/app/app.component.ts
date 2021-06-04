@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { DataService } from './data.service';
 
 
 @Component({
@@ -10,18 +11,8 @@ import { NgForm } from '@angular/forms';
 
 export class AppComponent {
 
+  constructor(public dsObj:DataService){
 
-  users=[];
-
- 
-  addUserData(ref:NgForm){
-
-    let userObj=ref.value;
-    
-    //push into users array
-    this.users.push(userObj)
-
-    //clear form flields
-    ref.reset();
   }
+
 }

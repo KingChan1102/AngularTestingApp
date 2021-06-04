@@ -7,6 +7,7 @@ import {Carousel} from '../models/home.model'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  n:number=5;
   carousels:Carousel[]=[
     {
       carouselImage:'https://wallpapercave.com/wp/XUEg3Ty.jpg',
@@ -26,7 +27,7 @@ export class HomeComponent {
   ]
   activeStatus="active";
   isActive(index){
-    console.log(1);
+    console.log(index);
     if(index>0){
       return "";
     }

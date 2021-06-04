@@ -20,6 +20,8 @@ import { Test2Component } from './test2/test2.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ViewplacesComponent } from './viewplaces/viewplaces.component';
 import { AddplacesComponent } from './addplaces/addplaces.component';
+import { SquarePipe } from './square.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { AddplacesComponent } from './addplaces/addplaces.component';
     Test2Component,
     UserDetailsComponent,
     ViewplacesComponent,
-    AddplacesComponent
+    AddplacesComponent,
+    SquarePipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
   onLogin(ref:NgForm){
     let loginObj=ref.value;
     if(loginObj.email=='admin' && loginObj.password=='admin'){
-      this.router.navigateByUrl('/admin')
+      localStorage.setItem("username","admin");
+      this.router.navigateByUrl('/admin');
     }
     else{
       alert('Enter Correct Credentials')

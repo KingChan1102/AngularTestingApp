@@ -1,0 +1,9 @@
+.fa-trash-alt{
+    color: red !important;
+}
+input{
+    width: 100%;
+}
+.btn:active,.btn:focus{
+    box-shadow: none;
+}

@@ -13,7 +13,7 @@
       "productImage": "https://wallpapercave.com/wp/wp6587219.jpg"
     },
     {
-      "id": 3,
+      "id":3,
       "productTitle": "Charminar",
       "description": "The Charminar (lit \"four minarets\") constructed in 1591, is a monument and mosque located in Hyderabad, Telangana, India. The landmark has become known ...",
       "productImage": "https://www.thehindu.com/news/cities/Hyderabad/d9nh5i/article33864232.ece/ALTERNATES/LANDSCAPE_1200/hy23Charminar"
@@ -29,12 +29,6 @@
       "productTitle": "Flower Valley Uttarakand",
       "description": "The Valley of Flowers is a high-altitude Himalayan valley that has long been acknowledged by renowned mountaineers, botanists, and in literature. It has been ...",
       "productImage": "https://sites.google.com/a/miamioh.edu/geo121f15/_/rsrc/1444604447269/home/asia-valley-of-the-flowers-india-10/ValleyofFlowers.jpg"
-    },
-    {
-      "productTitle": "Victoria Memorial",
-      "description": "The Victoria Memorial is a large marble building in Kolkata, which was built between 1906 and 1921. It is dedicated to the memory of Empress Victoria, and is now a museum under the auspices of the Ministry of Culture. ",
-      "productImage": "https://www.fabhotels.com/blog/wp-content/uploads/2019/05/Victoria-Memorial_600-1280x720.jpg",
-      "id": 6
     }
   ]
 }
